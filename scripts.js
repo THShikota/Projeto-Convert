@@ -1,5 +1,7 @@
 const amount = document.getElementById("amount")
 
+// Manipulando o input amount parar receber somente números.
 amount.addEventListener("input", () => {
-    console.log(amount.value)
+    const hasCharactersRegex = /\D+/g
+    amount.value  = amount.value.replace(hasCharactersRegex, "")
 })
