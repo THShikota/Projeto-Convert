@@ -1,72 +1,60 @@
-# Snitap
+# Convert
 
-O **Snitap** é uma landing page desenvolvida com **HTML5** e **CSS3** para promover uma marca de patins. O projeto apresenta uma interface moderna com uma seção hero animada, galeria de imagens, banner promocional e chamadas para ação, demonstrando técnicas de layout, organização modular de estilos e animações utilizando apenas CSS.
+O **Convert** é uma aplicação web desenvolvida com **HTML5**, **CSS3** e **JavaScript** para realizar a conversão de moedas estrangeiras para **Real Brasileiro (BRL)**. A interface permite informar um valor, selecionar uma moeda (Dólar, Euro ou Libra Esterlina) e visualizar o resultado da conversão de forma simples e intuitiva.
 
-Este projeto faz parte dos desafios práticos da **Rocketseat**, com foco na construção de interfaces modernas e responsivas.
+Este projeto faz parte dos desafios práticos da **Rocketseat**, com foco em manipulação do DOM, eventos, formulários e lógica com JavaScript.
 
 ---
 
 ## ✨ Funcionalidades
 
-* Landing page responsiva.
-* Seção Hero com destaque para o produto.
-* Texto animado com alternância de palavras.
-* Botões de ação (Comprar e Ver em ação).
-* Banner promocional.
-* Galeria de imagens.
-* Ícone de carrinho de compras.
-* Rodapé com links para redes sociais.
-* Layout organizado com CSS modular.
+* Conversão de moedas para Real Brasileiro (BRL).
+* Suporte às moedas:
+
+  * Dólar Americano (USD)
+  * Euro (EUR)
+  * Libra Esterlina (GBP)
+* Validação do campo de valor.
+* Restrição de entrada para caracteres numéricos.
+* Exibição da cotação utilizada.
+* Atualização dinâmica do resultado sem recarregar a página.
+* Interface moderna e responsiva.
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-| Tecnologia   | Finalidade                            |
-| ------------ | ------------------------------------- |
-| HTML5        | Estrutura da aplicação                |
-| CSS3         | Estilização e animações               |
-| Google Fonts | Tipografia (Inter, Montserrat e Syne) |
-| SVG          | Ícones e ilustrações                  |
+| Tecnologia        | Finalidade                               |
+| ----------------- | ---------------------------------------- |
+| HTML5             | Estrutura da aplicação                   |
+| CSS3              | Estilização                              |
+| JavaScript (ES6+) | Lógica de conversão e manipulação do DOM |
+| Google Fonts      | Tipografia (Roboto e IBM Plex Mono)      |
 
 ---
 
 ## 📦 Estrutura do projeto
 
 ```text
-Snitap/
-├── assets/
-│   ├── hero/
-│   ├── icons/
-│   ├── images/
-│   ├── banner.svg
+Projeto-Convert/
+├── img/
+│   ├── bg.png
+│   ├── check.svg
+│   ├── chevron-down.svg
 │   └── logo.svg
-├── styles/
-│   ├── banner.css
-│   ├── footer.css
-│   ├── gallery.css
-│   ├── global.css
-│   ├── header.css
-│   ├── hero.css
-│   └── index.css
-└── index.html
+├── index.html
+├── scripts.js
+└── styles.css
 ```
 
 ### Organização
 
-| Arquivo/Pasta        | Descrição                                         |
-| -------------------- | ------------------------------------------------- |
-| `index.html`         | Estrutura principal da landing page               |
-| `assets/hero`        | Imagens e elementos da seção Hero                 |
-| `assets/icons`       | Ícones da interface                               |
-| `assets/images`      | Imagens da galeria                                |
-| `styles/global.css`  | Estilos globais                                   |
-| `styles/header.css`  | Cabeçalho                                         |
-| `styles/hero.css`    | Seção principal (Hero)                            |
-| `styles/banner.css`  | Banner promocional                                |
-| `styles/gallery.css` | Galeria de imagens                                |
-| `styles/footer.css`  | Rodapé                                            |
-| `styles/index.css`   | Arquivo responsável por importar todos os estilos |
+| Arquivo/Pasta | Descrição                                       |
+| ------------- | ----------------------------------------------- |
+| `index.html`  | Estrutura principal da aplicação                |
+| `styles.css`  | Estilos da interface                            |
+| `scripts.js`  | Lógica da conversão e manipulação do formulário |
+| `img/`        | Imagens, ícones e logotipo da aplicação         |
 
 ---
 
@@ -74,7 +62,7 @@ Snitap/
 
 Para executar o projeto é necessário apenas:
 
-* Um navegador moderno (Google Chrome, Firefox, Microsoft Edge ou Safari).
+* Um navegador moderno (Google Chrome, Firefox, Edge ou Safari).
 
 ---
 
@@ -89,16 +77,16 @@ git clone <URL_DO_REPOSITORIO>
 Acesse a pasta do projeto:
 
 ```bash
-cd Snitap
+cd Projeto-Convert
 ```
 
 ---
 
 ## ▶️ Como executar
 
-Como se trata de um projeto estático, basta abrir o arquivo `index.html` em qualquer navegador.
+Como este é um projeto estático, basta abrir o arquivo `index.html` no navegador.
 
-Para uma melhor experiência durante o desenvolvimento, recomenda-se utilizar a extensão **Live Server** do Visual Studio Code.
+Durante o desenvolvimento, recomenda-se utilizar a extensão **Live Server** do Visual Studio Code para atualização automática da página.
 
 ---
 
@@ -108,15 +96,25 @@ Este projeto não possui testes automatizados.
 
 ---
 
-## 📚 Estrutura da Página
+## 📚 Funcionamento
 
-A landing page é composta pelas seguintes seções:
+O fluxo da aplicação é composto pelas seguintes etapas:
 
-* Cabeçalho
-* Hero
-* Banner promocional
-* Galeria de imagens
-* Rodapé
+1. Informar o valor que será convertido.
+2. Selecionar a moeda desejada.
+3. Clicar em **Converter em reais**.
+4. A aplicação calcula automaticamente o valor convertido utilizando a cotação definida no código.
+5. O resultado é exibido juntamente com a cotação utilizada.
+
+### Moedas disponíveis
+
+| Código | Moeda           |
+| ------ | --------------- |
+| USD    | Dólar Americano |
+| EUR    | Euro            |
+| GBP    | Libra Esterlina |
+
+> **Observação:** as cotações são fixas e definidas diretamente no arquivo `scripts.js`.
 
 ---
 
@@ -128,19 +126,19 @@ Este projeto não utiliza variáveis de ambiente.
 
 ## 📄 Scripts disponíveis
 
-Não existem scripts automatizados, pois o projeto utiliza apenas HTML e CSS.
+Não existem scripts automatizados, pois o projeto utiliza apenas HTML, CSS e JavaScript puro.
 
 ---
 
 ## 📌 Roadmap
 
-* Adicionar menu mobile.
-* Implementar animações adicionais para os componentes.
-* Criar página de detalhes dos produtos.
-* Integrar um catálogo de produtos.
-* Implementar carrinho de compras funcional.
-* Adicionar tema claro/escuro.
-* Melhorar a responsividade para dispositivos menores.
-* Publicar a aplicação no GitHub Pages ou Vercel.
+* Consumir cotações em tempo real utilizando uma API de câmbio.
+* Adicionar suporte para novas moedas.
+* Permitir conversão entre quaisquer moedas.
+* Aceitar valores decimais no campo de entrada.
+* Exibir histórico das conversões realizadas.
+* Implementar modo escuro.
+* Internacionalizar a interface.
+* Adicionar animações para a exibição do resultado.
 
 ---
